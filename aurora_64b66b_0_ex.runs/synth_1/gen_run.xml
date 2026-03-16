@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xczu48dr-ffvg1517-2-e" LaunchTime="1773695340" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/aurora_64b66b_0_exdes.dcp">
+  <File Type="PA-TCL" Name="top_ps_aurora_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_ps_aurora_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="top_ps_aurora_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top_ps_aurora_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="top_ps_aurora_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_ps_aurora_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top_ps_aurora_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_ps_aurora_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_ps_aurora_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/imports/aurora_64b66b_0_cdc_sync_exdes.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/shared_logic/aurora_64b66b_0_clock_module.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedIn" Val="ipsharedlogic"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/imports/aurora_64b66b_0_exdes.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/imports/aurora_64b66b_0_frame_check.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/shared_logic/aurora_64b66b_0_gt_common_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedIn" Val="ipsharedlogic"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/shared_logic/aurora_64b66b_0_gt_gtye4_common_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedIn" Val="ipsharedlogic"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/shared_logic/aurora_64b66b_0_support.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedIn" Val="ipsharedlogic"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/shared_logic/aurora_64b66b_0_support_reset_logic.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedIn" Val="ipsharedlogic"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/shared_logic/aurora_64b66b_0_ultrascale_tx_userclk.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedIn" Val="ipsharedlogic"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/shared_logic/gtwizard_ultrascale_v1_7_gtye4_common.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedIn" Val="ipsharedlogic"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Users/praga/Downloads/ps_to_aurora_bridge.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Users/praga/Downloads/top_ps_aurora_wrapper_cdc.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_ps_aurora_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/imports/aurora_64b66b_0_frame_gen.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top_ps_aurora_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/imports/aurora_64b66b_0_exdes.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/fixed_initclk_force.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="ProcessingOrder" Val="LATE"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/aurora_64b66b_0_exdes.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps8_0_96M_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_64b66b_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_9"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_zynq_ultra_ps_e_0_0"/>
+</GenRun>

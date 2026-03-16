@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Tue Mar 17 01:11:34 2026
+//Date        : Tue Mar 17 02:22:41 2026
 //Host        : LAPTOP-CH0R4GF2 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -11,7 +11,8 @@
 
 (* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=15,numNonXlnxBlks=0,numHierBlks=12,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=21,da_board_cnt=29,da_clkrst_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
-   (ps_gpio_tx_data0_tri_o,
+   (pl_clk0_0,
+    ps_gpio_tx_data0_tri_o,
     ps_gpio_tx_data1_tri_o,
     ps_gpio_tx_data2_tri_o,
     ps_gpio_tx_data3_tri_o,
@@ -21,6 +22,7 @@ module design_1
     ps_gpio_tx_data7_tri_o,
     ps_gpio_tx_tstatus_tri_i,
     ps_gpio_tx_tvalid_tri_o);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.PL_CLK0_0 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.PL_CLK0_0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, FREQ_HZ 99999985, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output pl_clk0_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ps_gpio_tx_data0 TRI_O" *) output [31:0]ps_gpio_tx_data0_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ps_gpio_tx_data1 TRI_O" *) output [31:0]ps_gpio_tx_data1_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ps_gpio_tx_data2 TRI_O" *) output [31:0]ps_gpio_tx_data2_tri_o;
@@ -254,6 +256,7 @@ module design_1
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
   assign axi_gpio_tx_status_GPIO_TRI_I = ps_gpio_tx_tstatus_tri_i[1:0];
+  assign pl_clk0_0 = zynq_ultra_ps_e_0_pl_clk0;
   assign ps_gpio_tx_data0_tri_o[31:0] = axi_gpio_tx_data0_GPIO_TRI_O;
   assign ps_gpio_tx_data1_tri_o[31:0] = axi_gpio_tx_data1_GPIO_TRI_O;
   assign ps_gpio_tx_data2_tri_o[31:0] = axi_gpio_tx_data2_GPIO_TRI_O;

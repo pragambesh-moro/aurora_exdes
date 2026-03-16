@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE63491DC8AEAE3B6",
+      "boundary_crc": "0x40E1BCA3B459EECC",
       "device": "xczu48dr-ffvg1517-2-e",
       "gen_directory": "../../../../aurora_64b66b_0_ex.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -169,6 +169,34 @@
             "direction": "I",
             "left": "1",
             "right": "0"
+          }
+        }
+      }
+    },
+    "ports": {
+      "pl_clk0_0": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk0",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "99999985",
+            "value_src": "user_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       }
@@ -2592,7 +2620,8 @@
           "axi_gpio_tx_data3/s_axi_aclk",
           "axi_gpio_tx_data2/s_axi_aclk",
           "rst_ps8_0_96M/slowest_sync_clk",
-          "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk"
+          "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk",
+          "pl_clk0_0"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {

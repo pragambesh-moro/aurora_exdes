@@ -49,7 +49,9 @@ module aurora_64b66b_0_exdes  #
     ps_pl_data_i,
     ps_pl_valid_i,
     ps_pl_ready_o,
-    ps_pl_busy_o
+    ps_pl_busy_o,
+    
+    user_clk_o
 );
 
 `define DLY #1
@@ -58,6 +60,7 @@ module aurora_64b66b_0_exdes  #
 
     input              INIT_CLK_P;
     input              INIT_CLK_N;
+    output             user_clk_o;
 
     // GTX Reference Clock Interface
     input              GTYQ0_P;
@@ -256,7 +259,9 @@ module aurora_64b66b_0_exdes  #
 
     assign reset2FrameGen   = reset_r1 | !channel_up_i;
     assign reset2FrameCheck = reset_r2 | !channel_up_i;
-
+    
+    assign user_clk_o = user_clk_i;
+    
     assign ps_pl_valid_rise_i = ps_pl_valid_sync_r & ~ps_pl_valid_sync_d1;
 
     assign ps_pl_ready_o = (source_select_r == 1'b1) && !ps_pl_busy_r && !ps_valid_r;

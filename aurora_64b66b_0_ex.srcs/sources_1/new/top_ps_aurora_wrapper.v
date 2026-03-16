@@ -19,7 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 `timescale 1 ps / 1 ps
 
-module top_ps_aurora_wrapper
+module top_ps_aurora_wrapper_old
 (
     // Aurora example design physical ports
     input              INIT_CLK_P,

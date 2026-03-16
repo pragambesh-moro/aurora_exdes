@@ -1,0 +1,976 @@
+
+*** Running vivado
+    with args -log top_ps_aurora_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_ps_aurora_wrapper.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_ps_aurora_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1001.852 ; gain = 117.852
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/utils_1/imports/synth_1/aurora_64b66b_0_exdes.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/utils_1/imports/synth_1/aurora_64b66b_0_exdes.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_ps_aurora_wrapper -part xczu48dr-ffvg1517-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Common 17-86] Your Synthesis license expires in 2 day(s)
+INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10404
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'resetUFC', assumed default net type 'wire' [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_check.v:152]
+WARNING: [Synth 8-11065] parameter 'AURORA_LANES' becomes localparam in 'aurora_64b66b_0_FRAME_CHECK' with formal parameter declaration list [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_check.v:95]
+WARNING: [Synth 8-11065] parameter 'LANE_DATA_WIDTH' becomes localparam in 'aurora_64b66b_0_FRAME_CHECK' with formal parameter declaration list [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_check.v:96]
+WARNING: [Synth 8-11065] parameter 'REM_BUS' becomes localparam in 'aurora_64b66b_0_FRAME_CHECK' with formal parameter declaration list [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_check.v:97]
+INFO: [Synth 8-11241] undeclared symbol 'power_down_i', assumed default net type 'wire' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support.v:193]
+INFO: [Synth 8-11241] undeclared symbol 'gt_to_common_qpllreset_i', assumed default net type 'wire' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support.v:230]
+INFO: [Synth 8-11241] undeclared symbol 'tx_lock', assumed default net type 'wire' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support.v:306]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2551.805 ; gain = 363.809
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_ps_aurora_wrapper' [C:/Users/praga/Downloads/top_ps_aurora_wrapper_cdc.v:3]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_3' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_3' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_9' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_9_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_9' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_9_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_8' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_8_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_8' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_8_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_7' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_7_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_7' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_7_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_6' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_6_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_6' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_6_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_5' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_5_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_5' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_5_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_4' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_4_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_4' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_4_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_1' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:764]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2328]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2328]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2460]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2460]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_P3UMW5' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2592]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_P3UMW5' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2592]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1E9R4HW' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2724]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1E9R4HW' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2724]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_NB1YAO' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2856]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_NB1YAO' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2856]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1FZ4A9T' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2988]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1FZ4A9T' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2988]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_MPDFMR' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3120]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_MPDFMR' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3120]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1GV49DU' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3252]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1GV49DU' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3252]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_K8X5UY' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3384]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_K8X5UY' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3384]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1AITGY3' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3516]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1AITGY3' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3516]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3648]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:3648]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_xbar_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2287]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2287]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:2287]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_1' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:764]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_96M_1' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_rst_ps8_0_96M_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_96M_1' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_rst_ps8_0_96M_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_96M_1' is unconnected for instance 'rst_ps8_0_96M' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:711]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_96M_1' is unconnected for instance 'rst_ps8_0_96M' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:711]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_96M_1' is unconnected for instance 'rst_ps8_0_96M' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:711]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_96M_1' is unconnected for instance 'rst_ps8_0_96M' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:711]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_96M' of module 'design_1_rst_ps8_0_96M_1' has 10 connections declared, but only 6 given [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:711]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:718]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:718]
+WARNING: [Synth 8-7071] port 'emio_gpio_o' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:718]
+WARNING: [Synth 8-7071] port 'emio_gpio_t' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:718]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 47 connections declared, but only 43 given [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:718]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ps_to_aurora_bridge' [C:/Users/praga/Downloads/ps_to_aurora_bridge.v:3]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2151]
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 256 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 256 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:493]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1885]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1885]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1885]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1885]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1207]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1274]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1296]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1907]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1907]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1619]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1619]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2151]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'xpm_fifo_async' is unconnected for instance 'u_ps_to_aurora_fifo' [C:/Users/praga/Downloads/ps_to_aurora_bridge.v:83]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'xpm_fifo_async' is unconnected for instance 'u_ps_to_aurora_fifo' [C:/Users/praga/Downloads/ps_to_aurora_bridge.v:83]
+WARNING: [Synth 8-7023] instance 'u_ps_to_aurora_fifo' of module 'xpm_fifo_async' has 26 connections declared, but only 24 given [C:/Users/praga/Downloads/ps_to_aurora_bridge.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'ps_to_aurora_bridge' (0#1) [C:/Users/praga/Downloads/ps_to_aurora_bridge.v:3]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_exdes' [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:20]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_rst_sync_exdes' [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:541]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_rst_sync_exdes' (0#1) [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:541]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_FRAME_CHECK' [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_check.v:71]
+	Parameter DATA_WIDTH bound to: 256 - type: integer 
+	Parameter STRB_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_FRAME_CHECK' (0#1) [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_check.v:71]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:71342]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:71342]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:1082]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_support' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support.v:67]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_gt_common_wrapper' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_gt_common_wrapper.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_gt_gtye4_common_wrapper' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_gt_gtye4_common_wrapper.v:4]
+INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_14_gtye4_common' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/gtwizard_ultrascale_v1_7_gtye4_common.v:55]
+	Parameter GTYE4_COMMON_AEN_QPLL0_FBDIV bound to: 1'b1 
+	Parameter GTYE4_COMMON_AEN_QPLL1_FBDIV bound to: 1'b1 
+	Parameter GTYE4_COMMON_AEN_SDM0TOGGLE bound to: 1'b0 
+	Parameter GTYE4_COMMON_AEN_SDM1TOGGLE bound to: 1'b0 
+	Parameter GTYE4_COMMON_A_SDM0TOGGLE bound to: 1'b0 
+	Parameter GTYE4_COMMON_A_SDM1DATA_HIGH bound to: 9'b000000000 
+	Parameter GTYE4_COMMON_A_SDM1DATA_LOW bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_A_SDM1TOGGLE bound to: 1'b0 
+	Parameter GTYE4_COMMON_BIAS_CFG0 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_BIAS_CFG1 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_BIAS_CFG2 bound to: 16'b0000010100100100 
+	Parameter GTYE4_COMMON_BIAS_CFG3 bound to: 16'b0000000001000001 
+	Parameter GTYE4_COMMON_BIAS_CFG4 bound to: 16'b0000000000010000 
+	Parameter GTYE4_COMMON_BIAS_CFG_RSVD bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_COMMON_CFG0 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_COMMON_CFG1 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_POR_CFG bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_PPF0_CFG bound to: 16'b0000011000000000 
+	Parameter GTYE4_COMMON_PPF1_CFG bound to: 16'b0000011000000000 
+	Parameter GTYE4_COMMON_QPLL0CLKOUT_RATE bound to: HALF - type: string 
+	Parameter GTYE4_COMMON_QPLL0_CFG0 bound to: 16'b0011001100011100 
+	Parameter GTYE4_COMMON_QPLL0_CFG1 bound to: 16'b1101000000111000 
+	Parameter GTYE4_COMMON_QPLL0_CFG1_G3 bound to: 16'b1101000000111000 
+	Parameter GTYE4_COMMON_QPLL0_CFG2 bound to: 16'b0000111111000000 
+	Parameter GTYE4_COMMON_QPLL0_CFG2_G3 bound to: 16'b0000111111000000 
+	Parameter GTYE4_COMMON_QPLL0_CFG3 bound to: 16'b0000000100100000 
+	Parameter GTYE4_COMMON_QPLL0_CFG4 bound to: 16'b0000000000000010 
+	Parameter GTYE4_COMMON_QPLL0_CP bound to: 10'b0011111111 
+	Parameter GTYE4_COMMON_QPLL0_CP_G3 bound to: 10'b0000001111 
+	Parameter GTYE4_COMMON_QPLL0_FBDIV bound to: 66 - type: integer 
+	Parameter GTYE4_COMMON_QPLL0_FBDIV_G3 bound to: 160 - type: integer 
+	Parameter GTYE4_COMMON_QPLL0_INIT_CFG0 bound to: 16'b0000001010110010 
+	Parameter GTYE4_COMMON_QPLL0_INIT_CFG1 bound to: 8'b00000000 
+	Parameter GTYE4_COMMON_QPLL0_LOCK_CFG bound to: 16'b0010010111101000 
+	Parameter GTYE4_COMMON_QPLL0_LOCK_CFG_G3 bound to: 16'b0010010111101000 
+	Parameter GTYE4_COMMON_QPLL0_LPF bound to: 10'b1000111111 
+	Parameter GTYE4_COMMON_QPLL0_LPF_G3 bound to: 10'b0111010101 
+	Parameter GTYE4_COMMON_QPLL0_PCI_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0_RATE_SW_USE_DRP bound to: 1'b1 
+	Parameter GTYE4_COMMON_QPLL0_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter GTYE4_COMMON_QPLL0_SDM_CFG0 bound to: 16'b0000000010000000 
+	Parameter GTYE4_COMMON_QPLL0_SDM_CFG1 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_QPLL0_SDM_CFG2 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_QPLL1CLKOUT_RATE bound to: HALF - type: string 
+	Parameter GTYE4_COMMON_QPLL1_CFG0 bound to: 16'b0011001100011100 
+	Parameter GTYE4_COMMON_QPLL1_CFG1 bound to: 16'b1101000000111000 
+	Parameter GTYE4_COMMON_QPLL1_CFG1_G3 bound to: 16'b1101000000111000 
+	Parameter GTYE4_COMMON_QPLL1_CFG2 bound to: 16'b0000111111000011 
+	Parameter GTYE4_COMMON_QPLL1_CFG2_G3 bound to: 16'b0000111111000011 
+	Parameter GTYE4_COMMON_QPLL1_CFG3 bound to: 16'b0000000100100000 
+	Parameter GTYE4_COMMON_QPLL1_CFG4 bound to: 16'b0000000000000010 
+	Parameter GTYE4_COMMON_QPLL1_CP bound to: 10'b0011111111 
+	Parameter GTYE4_COMMON_QPLL1_CP_G3 bound to: 10'b0001111111 
+	Parameter GTYE4_COMMON_QPLL1_FBDIV bound to: 66 - type: integer 
+	Parameter GTYE4_COMMON_QPLL1_FBDIV_G3 bound to: 80 - type: integer 
+	Parameter GTYE4_COMMON_QPLL1_INIT_CFG0 bound to: 16'b0000001010110010 
+	Parameter GTYE4_COMMON_QPLL1_INIT_CFG1 bound to: 8'b00000000 
+	Parameter GTYE4_COMMON_QPLL1_LOCK_CFG bound to: 16'b0010010111101000 
+	Parameter GTYE4_COMMON_QPLL1_LOCK_CFG_G3 bound to: 16'b0010010111101000 
+	Parameter GTYE4_COMMON_QPLL1_LPF bound to: 10'b1000011111 
+	Parameter GTYE4_COMMON_QPLL1_LPF_G3 bound to: 10'b0111010100 
+	Parameter GTYE4_COMMON_QPLL1_PCI_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1_RATE_SW_USE_DRP bound to: 1'b1 
+	Parameter GTYE4_COMMON_QPLL1_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter GTYE4_COMMON_QPLL1_SDM_CFG0 bound to: 16'b0000000010000000 
+	Parameter GTYE4_COMMON_QPLL1_SDM_CFG1 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_QPLL1_SDM_CFG2 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_RSVD_ATTR0 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_RSVD_ATTR1 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_RSVD_ATTR2 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_RSVD_ATTR3 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_RXRECCLKOUT0_SEL bound to: 2'b00 
+	Parameter GTYE4_COMMON_RXRECCLKOUT1_SEL bound to: 2'b00 
+	Parameter GTYE4_COMMON_SARC_ENB bound to: 1'b0 
+	Parameter GTYE4_COMMON_SARC_SEL bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM0INITSEED0_0 bound to: 16'b0000000100010001 
+	Parameter GTYE4_COMMON_SDM0INITSEED0_1 bound to: 9'b000010001 
+	Parameter GTYE4_COMMON_SDM1INITSEED0_0 bound to: 16'b0000000100010001 
+	Parameter GTYE4_COMMON_SDM1INITSEED0_1 bound to: 9'b000010001 
+	Parameter GTYE4_COMMON_SIM_MODE bound to: FAST - type: string 
+	Parameter GTYE4_COMMON_SIM_RESET_SPEEDUP bound to: TRUE - type: string 
+	Parameter GTYE4_COMMON_SIM_DEVICE bound to: ULTRASCALE_PLUS - type: string 
+	Parameter GTYE4_COMMON_UB_CFG0 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_UB_CFG1 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_UB_CFG2 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_UB_CFG3 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_UB_CFG4 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_UB_CFG5 bound to: 16'b0000010000000000 
+	Parameter GTYE4_COMMON_UB_CFG6 bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_BGBYPASSB_VAL bound to: 1'b1 
+	Parameter GTYE4_COMMON_BGMONITORENB_VAL bound to: 1'b1 
+	Parameter GTYE4_COMMON_BGPDB_VAL bound to: 1'b1 
+	Parameter GTYE4_COMMON_BGRCALOVRD_VAL bound to: 5'b10000 
+	Parameter GTYE4_COMMON_BGRCALOVRDENB_VAL bound to: 1'b1 
+	Parameter GTYE4_COMMON_DRPADDR_VAL bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_DRPCLK_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_DRPDI_VAL bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_DRPEN_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_DRPWE_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTGREFCLK0_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTGREFCLK1_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTNORTHREFCLK00_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTNORTHREFCLK01_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTNORTHREFCLK10_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTNORTHREFCLK11_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTREFCLK00_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTREFCLK01_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTREFCLK10_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTREFCLK11_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTSOUTHREFCLK00_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTSOUTHREFCLK01_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTSOUTHREFCLK10_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTSOUTHREFCLK11_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_PCIERATEQPLL0_VAL bound to: 3'b000 
+	Parameter GTYE4_COMMON_PCIERATEQPLL1_VAL bound to: 3'b000 
+	Parameter GTYE4_COMMON_PMARSVD0_VAL bound to: 8'b00000000 
+	Parameter GTYE4_COMMON_PMARSVD1_VAL bound to: 8'b00000000 
+	Parameter GTYE4_COMMON_QPLL0CLKRSVD0_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0CLKRSVD1_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0FBDIV_VAL bound to: 8'b00000000 
+	Parameter GTYE4_COMMON_QPLL0LOCKDETCLK_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0LOCKEN_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0PD_VAL bound to: 1'b1 
+	Parameter GTYE4_COMMON_QPLL0REFCLKSEL_VAL bound to: 3'b001 
+	Parameter GTYE4_COMMON_QPLL0RESET_VAL bound to: 1'b1 
+	Parameter GTYE4_COMMON_QPLL1CLKRSVD0_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1CLKRSVD1_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1FBDIV_VAL bound to: 8'b00000000 
+	Parameter GTYE4_COMMON_QPLL1LOCKDETCLK_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1LOCKEN_VAL bound to: 1'b1 
+	Parameter GTYE4_COMMON_QPLL1PD_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1REFCLKSEL_VAL bound to: 3'b001 
+	Parameter GTYE4_COMMON_QPLL1RESET_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLLRSVD1_VAL bound to: 8'b00000000 
+	Parameter GTYE4_COMMON_QPLLRSVD2_VAL bound to: 5'b00000 
+	Parameter GTYE4_COMMON_QPLLRSVD3_VAL bound to: 5'b00000 
+	Parameter GTYE4_COMMON_QPLLRSVD4_VAL bound to: 8'b00000000 
+	Parameter GTYE4_COMMON_RCALENB_VAL bound to: 1'b1 
+	Parameter GTYE4_COMMON_SDM0DATA_VAL bound to: 25'b0000000000000000000000000 
+	Parameter GTYE4_COMMON_SDM0RESET_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM0TOGGLE_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM0WIDTH_VAL bound to: 2'b00 
+	Parameter GTYE4_COMMON_SDM1DATA_VAL bound to: 25'b0000000000000000000000000 
+	Parameter GTYE4_COMMON_SDM1RESET_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM1TOGGLE_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM1WIDTH_VAL bound to: 2'b00 
+	Parameter GTYE4_COMMON_UBCFGSTREAMEN_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBDO_VAL bound to: 16'b0000000000000000 
+	Parameter GTYE4_COMMON_UBDRDY_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBENABLE_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBGPI_VAL bound to: 2'b00 
+	Parameter GTYE4_COMMON_UBINTR_VAL bound to: 2'b00 
+	Parameter GTYE4_COMMON_UBIOLMBRST_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMBRST_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMCAPTURE_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMDBGRST_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMDBGUPDATE_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMREGEN_VAL bound to: 4'b0000 
+	Parameter GTYE4_COMMON_UBMDMSHIFT_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMSYSRST_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMTCK_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMTDI_VAL bound to: 1'b0 
+	Parameter GTYE4_COMMON_BGBYPASSB_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_BGMONITORENB_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_BGPDB_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_BGRCALOVRD_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_BGRCALOVRDENB_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_DRPADDR_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_DRPCLK_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_DRPDI_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_DRPEN_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_DRPWE_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTGREFCLK0_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTGREFCLK1_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTNORTHREFCLK00_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTNORTHREFCLK01_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTNORTHREFCLK10_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTNORTHREFCLK11_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTREFCLK00_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTREFCLK01_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTREFCLK10_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTREFCLK11_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTSOUTHREFCLK00_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTSOUTHREFCLK01_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTSOUTHREFCLK10_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_GTSOUTHREFCLK11_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_PCIERATEQPLL0_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_PCIERATEQPLL1_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_PMARSVD0_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_PMARSVD1_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0CLKRSVD0_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0CLKRSVD1_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0FBDIV_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0LOCKDETCLK_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0LOCKEN_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0PD_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0REFCLKSEL_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL0RESET_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1CLKRSVD0_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1CLKRSVD1_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1FBDIV_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1LOCKDETCLK_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1LOCKEN_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1PD_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1REFCLKSEL_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLL1RESET_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLLRSVD1_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLLRSVD2_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLLRSVD3_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_QPLLRSVD4_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_RCALENB_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM0DATA_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM0RESET_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM0TOGGLE_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM0WIDTH_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM1DATA_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM1RESET_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM1TOGGLE_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_SDM1WIDTH_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBCFGSTREAMEN_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBDO_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBDRDY_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBENABLE_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBGPI_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBINTR_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBIOLMBRST_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMBRST_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMCAPTURE_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMDBGRST_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMDBGUPDATE_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMREGEN_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMSHIFT_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMSYSRST_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMTCK_TIE_EN bound to: 1'b0 
+	Parameter GTYE4_COMMON_UBMDMTDI_TIE_EN bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'GTYE4_COMMON' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:52535]
+	Parameter AEN_QPLL0_FBDIV bound to: 1'b1 
+	Parameter AEN_QPLL1_FBDIV bound to: 1'b1 
+	Parameter AEN_SDM0TOGGLE bound to: 1'b0 
+	Parameter AEN_SDM1TOGGLE bound to: 1'b0 
+	Parameter A_SDM0TOGGLE bound to: 1'b0 
+	Parameter A_SDM1DATA_HIGH bound to: 9'b000000000 
+	Parameter A_SDM1DATA_LOW bound to: 16'b0000000000000000 
+	Parameter A_SDM1TOGGLE bound to: 1'b0 
+	Parameter BIAS_CFG0 bound to: 16'b0000000000000000 
+	Parameter BIAS_CFG1 bound to: 16'b0000000000000000 
+	Parameter BIAS_CFG2 bound to: 16'b0000010100100100 
+	Parameter BIAS_CFG3 bound to: 16'b0000000001000001 
+	Parameter BIAS_CFG4 bound to: 16'b0000000000010000 
+	Parameter BIAS_CFG_RSVD bound to: 16'b0000000000000000 
+	Parameter COMMON_CFG0 bound to: 16'b0000000000000000 
+	Parameter COMMON_CFG1 bound to: 16'b0000000000000000 
+	Parameter POR_CFG bound to: 16'b0000000000000000 
+	Parameter PPF0_CFG bound to: 16'b0000011000000000 
+	Parameter PPF1_CFG bound to: 16'b0000011000000000 
+	Parameter QPLL0CLKOUT_RATE bound to: HALF - type: string 
+	Parameter QPLL0_CFG0 bound to: 16'b0011001100011100 
+	Parameter QPLL0_CFG1 bound to: 16'b1101000000111000 
+	Parameter QPLL0_CFG1_G3 bound to: 16'b1101000000111000 
+	Parameter QPLL0_CFG2 bound to: 16'b0000111111000000 
+	Parameter QPLL0_CFG2_G3 bound to: 16'b0000111111000000 
+	Parameter QPLL0_CFG3 bound to: 16'b0000000100100000 
+	Parameter QPLL0_CFG4 bound to: 16'b0000000000000010 
+	Parameter QPLL0_CP bound to: 10'b0011111111 
+	Parameter QPLL0_CP_G3 bound to: 10'b0000001111 
+	Parameter QPLL0_FBDIV bound to: 66 - type: integer 
+	Parameter QPLL0_FBDIV_G3 bound to: 160 - type: integer 
+	Parameter QPLL0_INIT_CFG0 bound to: 16'b0000001010110010 
+	Parameter QPLL0_INIT_CFG1 bound to: 8'b00000000 
+	Parameter QPLL0_LOCK_CFG bound to: 16'b0010010111101000 
+	Parameter QPLL0_LOCK_CFG_G3 bound to: 16'b0010010111101000 
+	Parameter QPLL0_LPF bound to: 10'b1000111111 
+	Parameter QPLL0_LPF_G3 bound to: 10'b0111010101 
+	Parameter QPLL0_PCI_EN bound to: 1'b0 
+	Parameter QPLL0_RATE_SW_USE_DRP bound to: 1'b1 
+	Parameter QPLL0_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter QPLL0_SDM_CFG0 bound to: 16'b0000000010000000 
+	Parameter QPLL0_SDM_CFG1 bound to: 16'b0000000000000000 
+	Parameter QPLL0_SDM_CFG2 bound to: 16'b0000000000000000 
+	Parameter QPLL1CLKOUT_RATE bound to: HALF - type: string 
+	Parameter QPLL1_CFG0 bound to: 16'b0011001100011100 
+	Parameter QPLL1_CFG1 bound to: 16'b1101000000111000 
+	Parameter QPLL1_CFG1_G3 bound to: 16'b1101000000111000 
+	Parameter QPLL1_CFG2 bound to: 16'b0000111111000011 
+	Parameter QPLL1_CFG2_G3 bound to: 16'b0000111111000011 
+	Parameter QPLL1_CFG3 bound to: 16'b0000000100100000 
+	Parameter QPLL1_CFG4 bound to: 16'b0000000000000010 
+	Parameter QPLL1_CP bound to: 10'b0011111111 
+	Parameter QPLL1_CP_G3 bound to: 10'b0001111111 
+	Parameter QPLL1_FBDIV bound to: 66 - type: integer 
+	Parameter QPLL1_FBDIV_G3 bound to: 80 - type: integer 
+	Parameter QPLL1_INIT_CFG0 bound to: 16'b0000001010110010 
+	Parameter QPLL1_INIT_CFG1 bound to: 8'b00000000 
+	Parameter QPLL1_LOCK_CFG bound to: 16'b0010010111101000 
+	Parameter QPLL1_LOCK_CFG_G3 bound to: 16'b0010010111101000 
+	Parameter QPLL1_LPF bound to: 10'b1000011111 
+	Parameter QPLL1_LPF_G3 bound to: 10'b0111010100 
+	Parameter QPLL1_PCI_EN bound to: 1'b0 
+	Parameter QPLL1_RATE_SW_USE_DRP bound to: 1'b1 
+	Parameter QPLL1_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter QPLL1_SDM_CFG0 bound to: 16'b0000000010000000 
+	Parameter QPLL1_SDM_CFG1 bound to: 16'b0000000000000000 
+	Parameter QPLL1_SDM_CFG2 bound to: 16'b0000000000000000 
+	Parameter RSVD_ATTR0 bound to: 16'b0000000000000000 
+	Parameter RSVD_ATTR1 bound to: 16'b0000000000000000 
+	Parameter RSVD_ATTR2 bound to: 16'b0000000000000000 
+	Parameter RSVD_ATTR3 bound to: 16'b0000000000000000 
+	Parameter RXRECCLKOUT0_SEL bound to: 2'b00 
+	Parameter RXRECCLKOUT1_SEL bound to: 2'b00 
+	Parameter SARC_ENB bound to: 1'b0 
+	Parameter SARC_SEL bound to: 1'b0 
+	Parameter SDM0INITSEED0_0 bound to: 16'b0000000100010001 
+	Parameter SDM0INITSEED0_1 bound to: 9'b000010001 
+	Parameter SDM1INITSEED0_0 bound to: 16'b0000000100010001 
+	Parameter SDM1INITSEED0_1 bound to: 9'b000010001 
+	Parameter SIM_DEVICE bound to: ULTRASCALE_PLUS - type: string 
+	Parameter SIM_MODE bound to: FAST - type: string 
+	Parameter SIM_RESET_SPEEDUP bound to: TRUE - type: string 
+	Parameter UB_CFG0 bound to: 16'b0000000000000000 
+	Parameter UB_CFG1 bound to: 16'b0000000000000000 
+	Parameter UB_CFG2 bound to: 16'b0000000000000000 
+	Parameter UB_CFG3 bound to: 16'b0000000000000000 
+	Parameter UB_CFG4 bound to: 16'b0000000000000000 
+	Parameter UB_CFG5 bound to: 16'b0000010000000000 
+	Parameter UB_CFG6 bound to: 16'b0000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'GTYE4_COMMON' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:52535]
+INFO: [Synth 8-6155] done synthesizing module 'gtwizard_ultrascale_v1_7_14_gtye4_common' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/gtwizard_ultrascale_v1_7_gtye4_common.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_gt_gtye4_common_wrapper' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_gt_gtye4_common_wrapper.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_gt_common_wrapper' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_gt_common_wrapper.v:6]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE4' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:71527]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE4' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:71527]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_CLOCK_MODULE' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_clock_module.v:67]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_ultrascale_tx_userclk' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_ultrascale_tx_userclk.v:60]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_GT' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:1258]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp_diablo.v:1258]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_ultrascale_tx_userclk' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_ultrascale_tx_userclk.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_CLOCK_MODULE' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_clock_module.v:67]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_SUPPORT_RESET_LOGIC' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_rst_sync_shared' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:139]
+	Parameter c_mtbf_stages bound to: 5'b00101 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_rst_sync_shared' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:139]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_SUPPORT_RESET_LOGIC' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/aurora_64b66b_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/aurora_64b66b_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'gt_powergood' of module 'aurora_64b66b_0' is unconnected for instance 'aurora_64b66b_0_i' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support.v:340]
+WARNING: [Synth 8-7023] instance 'aurora_64b66b_0_i' of module 'aurora_64b66b_0' has 38 connections declared, but only 37 given [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support.v:340]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_support' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support.v:67]
+INFO: [Synth 8-226] default block is never used [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:418]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:559]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/ila_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/.Xil/Vivado-14592-LAPTOP-CH0R4GF2/realtime/ila_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_exdes' (0#1) [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'top_ps_aurora_wrapper' (0#1) [C:/Users/praga/Downloads/top_ps_aurora_wrapper_cdc.v:3]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3017]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1391]
+WARNING: [Synth 8-6014] Unused sequential element stg4_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:596]
+WARNING: [Synth 8-6014] Unused sequential element stg5_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:597]
+WARNING: [Synth 8-6014] Unused sequential element stg6_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:598]
+WARNING: [Synth 8-6014] Unused sequential element stg7_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:599]
+WARNING: [Synth 8-6014] Unused sequential element stg8_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:600]
+WARNING: [Synth 8-6014] Unused sequential element stg9_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:601]
+WARNING: [Synth 8-6014] Unused sequential element stg10_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:602]
+WARNING: [Synth 8-6014] Unused sequential element stg11_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:603]
+WARNING: [Synth 8-6014] Unused sequential element stg12_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:604]
+WARNING: [Synth 8-6014] Unused sequential element stg13_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:605]
+WARNING: [Synth 8-6014] Unused sequential element stg14_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:606]
+WARNING: [Synth 8-6014] Unused sequential element stg15_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:607]
+WARNING: [Synth 8-6014] Unused sequential element stg16_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:608]
+WARNING: [Synth 8-6014] Unused sequential element stg17_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:609]
+WARNING: [Synth 8-6014] Unused sequential element stg18_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:610]
+WARNING: [Synth 8-6014] Unused sequential element stg19_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:611]
+WARNING: [Synth 8-6014] Unused sequential element stg20_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:612]
+WARNING: [Synth 8-6014] Unused sequential element stg21_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:613]
+WARNING: [Synth 8-6014] Unused sequential element stg22_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:614]
+WARNING: [Synth 8-6014] Unused sequential element stg23_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:615]
+WARNING: [Synth 8-6014] Unused sequential element stg24_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:616]
+WARNING: [Synth 8-6014] Unused sequential element stg25_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:617]
+WARNING: [Synth 8-6014] Unused sequential element stg26_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:618]
+WARNING: [Synth 8-6014] Unused sequential element stg27_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:619]
+WARNING: [Synth 8-6014] Unused sequential element stg28_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:620]
+WARNING: [Synth 8-6014] Unused sequential element stg29_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:621]
+WARNING: [Synth 8-6014] Unused sequential element stg30_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:622]
+WARNING: [Synth 8-6014] Unused sequential element stg31_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v:623]
+WARNING: [Synth 8-6014] Unused sequential element RX_REM_R3_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_check.v:174]
+WARNING: [Synth 8-3848] Net AXI4_S_IP_TX_TREADY in module/entity aurora_64b66b_0_FRAME_CHECK does not have driver. [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_check.v:105]
+WARNING: [Synth 8-6014] Unused sequential element stg6_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:196]
+WARNING: [Synth 8-6014] Unused sequential element stg7_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:197]
+WARNING: [Synth 8-6014] Unused sequential element stg8_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:198]
+WARNING: [Synth 8-6014] Unused sequential element stg9_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:199]
+WARNING: [Synth 8-6014] Unused sequential element stg10_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:200]
+WARNING: [Synth 8-6014] Unused sequential element stg11_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:201]
+WARNING: [Synth 8-6014] Unused sequential element stg12_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:202]
+WARNING: [Synth 8-6014] Unused sequential element stg13_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:203]
+WARNING: [Synth 8-6014] Unused sequential element stg14_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:204]
+WARNING: [Synth 8-6014] Unused sequential element stg15_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:205]
+WARNING: [Synth 8-6014] Unused sequential element stg16_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:206]
+WARNING: [Synth 8-6014] Unused sequential element stg17_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:207]
+WARNING: [Synth 8-6014] Unused sequential element stg18_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:208]
+WARNING: [Synth 8-6014] Unused sequential element stg19_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:209]
+WARNING: [Synth 8-6014] Unused sequential element stg20_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:210]
+WARNING: [Synth 8-6014] Unused sequential element stg21_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:211]
+WARNING: [Synth 8-6014] Unused sequential element stg22_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:212]
+WARNING: [Synth 8-6014] Unused sequential element stg23_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:213]
+WARNING: [Synth 8-6014] Unused sequential element stg24_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:214]
+WARNING: [Synth 8-6014] Unused sequential element stg25_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:215]
+WARNING: [Synth 8-6014] Unused sequential element stg26_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:216]
+WARNING: [Synth 8-6014] Unused sequential element stg27_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:217]
+WARNING: [Synth 8-6014] Unused sequential element stg28_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:218]
+WARNING: [Synth 8-6014] Unused sequential element stg29_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:219]
+WARNING: [Synth 8-6014] Unused sequential element stg30_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:220]
+WARNING: [Synth 8-6014] Unused sequential element stg31_reg was removed.  [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:221]
+INFO: [Synth 8-3936] Found unconnected internal register 'dly_gt_rst_r_reg' and it is trimmed from '20' to '19' bits. [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_support_reset_logic.v:132]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'aurora_64b66b_0_block_i'. This will prevent further optimization [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:370]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_ila'. This will prevent further optimization [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:559]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'core_traffic.frame_check_i'. This will prevent further optimization [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:511]
+WARNING: [Synth 8-6014] Unused sequential element hard_err_r_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:294]
+WARNING: [Synth 8-6014] Unused sequential element soft_err_r_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:295]
+WARNING: [Synth 8-6014] Unused sequential element lane_up_r_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:296]
+WARNING: [Synth 8-6014] Unused sequential element channel_up_r_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:297]
+WARNING: [Synth 8-6014] Unused sequential element pma_init_assertion_r_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:326]
+WARNING: [Synth 8-6014] Unused sequential element usr_clk_count_done_r_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:553]
+WARNING: [Synth 8-6014] Unused sequential element usr_clk_count_done_r2_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:556]
+WARNING: [Synth 8-6014] Unused sequential element reset_r2_reg was removed.  [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:261]
+WARNING: [Synth 8-7129] Port AXI4_S_IP_TX_TREADY in module aurora_64b66b_0_FRAME_CHECK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[255] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[254] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[253] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[252] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[251] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[250] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[249] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[248] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[247] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[246] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[245] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[244] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[243] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[242] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[241] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[240] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[239] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[238] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[237] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[236] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[235] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[234] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[233] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[232] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[231] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[230] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[229] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[228] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[227] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[226] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[225] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[224] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[223] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[222] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[221] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[220] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[219] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[218] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[217] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[216] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[215] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[214] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[213] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[212] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[211] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[210] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[209] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[208] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[207] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[206] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[205] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[204] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[203] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[202] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[201] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[200] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[199] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[198] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[197] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[196] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[195] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[194] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[193] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[192] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[191] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[190] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[189] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[188] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[187] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[186] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[185] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[184] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[183] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[182] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[181] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[180] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[179] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[178] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[177] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[176] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[175] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[174] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[173] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[172] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[171] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[170] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[169] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[168] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[167] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[166] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[165] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[164] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[163] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[162] in module xpm_memory_base is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2650.207 ; gain = 462.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2668.121 ; gain = 480.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2668.121 ; gain = 480.125
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 2680.160 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_status'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_status'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data1'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data1'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_ctrl'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_ctrl'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data7'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data7'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data6'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data6'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data5'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data5'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data4'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data4'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data3'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data3'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data2'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9/design_1_axi_gpio_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data2'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_96M_1/design_1_rst_ps8_0_96M_1/design_1_rst_ps8_0_96M_1_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/rst_ps8_0_96M'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_96M_1/design_1_rst_ps8_0_96M_1/design_1_rst_ps8_0_96M_1_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/rst_ps8_0_96M'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/zynq_ultra_ps_e_0'
+create_clock: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2792.301 ; gain = 17.910
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'u_design_1_wrapper/design_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'u_aurora_64b66b_0_exdes/u_ila'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'u_aurora_64b66b_0_exdes/u_ila'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:10]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:11]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:12]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:38]
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_ps_aurora_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_ps_aurora_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc]
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_ps_aurora_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_ps_aurora_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_ps_aurora_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_ps_aurora_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_ps_aurora_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_ps_aurora_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 7 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2792.301 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 2792.301 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_aurora_64b66b_0_exdes/u_ila' at clock pin 'clk' is different from the actual clock period '6.208', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.206' specified during out-of-context synthesis of instance 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i' at clock pin 'init_clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2792.301 ; gain = 604.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu48dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2792.301 ; gain = 604.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for RXN[0]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RXN[0]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for RXN[1]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RXN[1]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for RXN[2]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RXN[2]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for RXN[3]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RXN[3]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for RXP[0]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RXP[0]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for RXP[1]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RXP[1]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for RXP[2]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RXP[2]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for RXP[3]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RXP[3]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for TXN[0]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TXN[0]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for TXN[1]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TXN[1]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for TXN[2]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TXN[2]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for TXN[3]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TXN[3]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for TXP[0]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TXP[0]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for TXP[1]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TXP[1]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for TXP[2]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TXP[2]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for TXP[3]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TXP[3]. (constraint file  c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 33).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_data0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_status. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_data1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_ctrl. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_data7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_data6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_data5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_data4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_data3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/axi_gpio_tx_data2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/rst_ps8_0_96M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_design_1_wrapper/design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_aurora_64b66b_0_exdes/u_ila. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ps_to_aurora_bridge/u_ps_to_aurora_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ps_to_aurora_bridge/u_ps_to_aurora_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ps_to_aurora_bridge/u_ps_to_aurora_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ps_to_aurora_bridge/u_ps_to_aurora_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ps_to_aurora_bridge/u_ps_to_aurora_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ps_to_aurora_bridge/u_ps_to_aurora_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ps_to_aurora_bridge/u_ps_to_aurora_fifo. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2792.301 ; gain = 604.305
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-6904] The RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=256) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2792.301 ; gain = 604.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   4 Input    5 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 1     
+	   3 Input    5 Bit       Adders := 2     
+	   4 Input    4 Bit       Adders := 3     
+	   3 Input    4 Bit       Adders := 1     
+	   4 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      5 Bit         XORs := 2     
+	   2 Input      4 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 14    
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	              256 Bit    Registers := 6     
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 15    
+	                4 Bit    Registers := 15    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 53    
++---RAMs : 
+	               4K Bit	(16 X 256 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input  256 Bit        Muxes := 1     
+	   3 Input    9 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 8     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 33    
+	   4 Input    2 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 12    
+	   6 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-6904] The RAM "\u_ps_to_aurora_bridge/u_ps_to_aurora_fifo /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg " of size (depth=16 x width=256) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "\u_ps_to_aurora_bridge/u_ps_to_aurora_fifo /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg " of size (depth=16 x width=256) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
