@@ -1,0 +1,143 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Mar 13 03:31:38 2026
+# Process ID: 22384
+# Current directory: c:/Research/aurora_64b66b_0_ex
+# Command line: vivado.exe -notrace -source c:/Research/aurora_test/.Xil/aurora_64b66b_0/aurora_64b66b_0_ex.tcl
+# Log file: c:/Research/aurora_64b66b_0_ex/vivado.log
+# Journal file: c:/Research/aurora_64b66b_0_ex\vivado.jou
+# Running On: LAPTOP-CH0R4GF2, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 12, Host memory: 16652 MB
+#-----------------------------------------------------------
+start_gui
+source c:/Research/aurora_test/.Xil/aurora_64b66b_0/aurora_64b66b_0_ex.tcl -notrace
+update_compile_order -fileset sources_1
+launch_simulation
+source aurora_64b66b_0_TB.tcl
+close_sim
+launch_runs synth_1 -jobs 14
+wait_on_run synth_1
+launch_runs impl_1 -jobs 14
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+report_property [get ports INIT_CLK_P]
+report_property [get_ports INIT_CLK_P]
+reset_run synth_1
+launch_runs impl_1 -jobs 14
+wait_on_run impl_1
+open_run impl_1
+report_property [get_ports INIT_CLK_P]
+file mkdir c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1
+file mkdir c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new
+close [ open c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/zzz_inintclk_override.xdc w ]
+add_files -fileset constrs_1 c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/zzz_inintclk_override.xdc
+set_property PROCESSING_ORDER LATE [get_files zzz_initclk_override.xdc]
+set_property PROCESSING_ORDER LATE [get_files zzz_inintclk_override.xdc]
+reset_run synth-1
+reset_run synth_1
+reset_run impl_1
+close_design
+launch_runs synth_1 -jobs 14
+wait_on_run synth_1
+report_compile_order -constraints
+launch_runs impl_1 -jobs 14
+wait_on_run impl_1
+report_property [get_ports INIT_CLK_P]
+open_run impl_1
+report_compile_order -constraints
+get_files -of_objects [get_filesets constrs_1]
+report_property [get_ports INIT_CLK_P]
+report_compile_order -constraints
+set_property PROCESSING_ORDER LATE [get_files zzz_inintclk_override.xdc]
+report_compile_order -constraints
+report_property [get_ports INIT_CLK_P]
+export_ip_user_files -of_objects  [get_files c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/zzz_inintclk_override.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/zzz_inintclk_override.xdc
+file delete -force c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/zzz_inintclk_override.xdc
+reset_run synth_1
+reset_run impl_1
+close_design
+launch_runs synth_1
+launch_runs impl_1 -jobs 14
+wait_on_run impl_1
+open_run impl_1
+report_property [get_ports INIT_CLK_P]
+report_property [get_ports INIT_CLK_N]
+foreach f [get_files -of_objects [get_filesets constrs_1]] {
+  if {[string match *.xdc $f]} {
+    set fh [open $f r]
+    set txt [read $fh]
+    close $fh
+    set hit 0
+    foreach line [split $txt "\n"] {
+      if {[string match *INIT_CLK_P* $line] || [string match *INIT_CLK_N* $line] || [string match *D9* $line]} {
+        if {!$hit} {
+          puts "\n=== $f ==="
+          set hit 1
+        }
+        puts $line
+      }
+    }
+  }
+}
+catch {remove_files [get_files zzz_inintclk_override.xdc]}
+catch {remove_files [get_files zzz_inintclk_override.xdc]}
+set fh [open fixed_initclk_force.xdc w]
+puts $fh {set_property PACKAGE_PIN G12 [get_ports {INIT_CLK_P}]}
+puts $fh {set_property PACKAGE_PIN G13 [get_ports {INIT_CLK_N}]}
+puts $fh {set_property LOC G12 [get_ports {INIT_CLK_P}]}
+puts $fh {set_property LOC G13 [get_ports {INIT_CLK_N}]}
+puts $fh {set_property IOSTANDARD DIFF_SSTL12 [get_ports {INIT_CLK_P INIT_CLK_N}]}
+close $fh
+add_files -fileset constrs_1 fixed_initclk_force.xdc
+set_property PROCESSING_ORDER LATE [get_files fixed_initclk_force.xdc]
+reset_run synth_1
+close_design
+reset_run impl_1
+launch_runs synth_1
+wait_on_run synth_1
+open_run synth_1
+report_property [get_ports INIT_CLK_P]
+report_property [get_ports INIT_CLK_N]
+puts "INIT_CLK_P LOC        = [get_property LOC [get_ports INIT_CLK_P]]"
+puts "INIT_CLK_N LOC        = [get_property LOC [get_ports INIT_CLK_N]]"
+puts "INIT_CLK_P PACKAGEPIN = [get_property PACKAGE_PIN [get_ports INIT_CLK_P]]"
+puts "INIT_CLK_N PACKAGEPIN = [get_property PACKAGE_PIN [get_ports INIT_CLK_N]]"
+puts "INIT_CLK_P FIXED      = [get_property IS_LOC_FIXED [get_ports INIT_CLK_P]]"
+puts "INIT_CLK_N FIXED      = [get_property IS_LOC_FIXED [get_ports INIT_CLK_N]]"
+close_design
+open_run synth_1
+set p [get_ports {INIT_CLK_P}]
+set n [get_ports {INIT_CLK_N}]
+set_property PACKAGE_PIN G12 $p
+set_property PACKAGE_PIN G13 $n
+close_design
+reset_runs synth_1
+reset_run imple_1
+reset_run impl_1
+launch run synth_1
+launch_run synth_1
+wait_on_runs synth_1
+launch_runs impl_1 -jobs 14
+wait_on_run impl_1
+wait_on_runs impl_1
+open_run impl_1
+report_property [get_ports INIT_CLK_P]
+launch_runs impl_1 -to_step write_bitstream -jobs 14
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121

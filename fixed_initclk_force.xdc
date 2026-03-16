@@ -1,0 +1,5 @@
+set_property PACKAGE_PIN G12 [get_ports {INIT_CLK_P}]
+set_property PACKAGE_PIN G13 [get_ports {INIT_CLK_N}]
+set_property LOC G12 [get_ports {INIT_CLK_P}]
+set_property LOC G13 [get_ports {INIT_CLK_N}]
+set_property IOSTANDARD DIFF_SSTL12 [get_ports {INIT_CLK_P INIT_CLK_N}]
