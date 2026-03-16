@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu48dr-ffvg1517-2-e" LaunchTime="1773695340" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/aurora_64b66b_0_exdes.dcp">
+<GenRun Id="synth_1" LaunchPart="xczu48dr-ffvg1517-2-e" LaunchTime="1773696769" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/aurora_64b66b_0_exdes.dcp">
   <File Type="PA-TCL" Name="top_ps_aurora_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_ps_aurora_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_ps_aurora_wrapper_reports.tcl"/>
@@ -102,15 +102,23 @@
         <Attr Name="UsedIn" Val="ipsharedlogic"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Users/praga/Downloads/ps_to_aurora_bridge.v">
+    <File Path="$PSRCDIR/sources_1/new/ps_to_aurora_bridge.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Users/praga/Downloads/top_ps_aurora_wrapper_cdc.v">
+    <File Path="$PSRCDIR/sources_1/new/top_ps_aurora_wrapper_cdc.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/imports/aurora_64b66b_0_frame_gen.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -124,7 +132,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/imports/aurora_64b66b_0_frame_gen.v">
+    <File Path="$PPRDIR/../../Users/praga/Downloads/top_ps_aurora_wrapper_cdc.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -150,6 +158,12 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="ProcessingOrder" Val="LATE"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/new/timing_async_fix.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>

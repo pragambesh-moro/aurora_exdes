@@ -25,42 +25,43 @@ module ps_to_aurora_bridge
 );
 
     // ------------------------------------------------------------------------
-    // Write-side pulse detect in PS clock domain
+    // PS clock domain: detect rising edge on valid
     // ------------------------------------------------------------------------
-    reg ps_valid_d1 = 1'b0;
+    reg  ps_valid_d1 = 1'b0;
     wire ps_valid_rise;
-    wire fifo_full;
-    wire fifo_empty;
-    wire [255:0] fifo_dout;
-    reg fifo_rd_en = 1'b0;
-    wire fifo_wr_en;
-
-    reg aurora_busy_meta_ps  = 1'b0;
-    reg aurora_busy_sync_ps  = 1'b0;
-    reg aurora_ready_meta_ps = 1'b0;
-    reg aurora_ready_sync_ps = 1'b0;
 
     assign ps_valid_rise = ps_gpio_tx_valid_i & ~ps_valid_d1;
-    assign fifo_wr_en    = ps_valid_rise & ~fifo_full;
 
     always @(posedge ps_clk_i) begin
-        ps_valid_d1 <= ps_gpio_tx_valid_i;
-
-        aurora_busy_meta_ps  <= aurora_ps_busy_i;
-        aurora_busy_sync_ps  <= aurora_busy_meta_ps;
-        aurora_ready_meta_ps <= aurora_ps_ready_i;
-        aurora_ready_sync_ps <= aurora_ready_meta_ps;
+        if (ps_rst_i)
+            ps_valid_d1 <= 1'b0;
+        else
+            ps_valid_d1 <= ps_gpio_tx_valid_i;
     end
 
-    // Status back to PS software
-    // bit0 = ready_for_new
-    // bit1 = busy
-    assign ps_gpio_tx_status_o[0] = aurora_ready_sync_ps & ~fifo_full;
-    assign ps_gpio_tx_status_o[1] = aurora_busy_sync_ps  | ~fifo_empty;
+    // ------------------------------------------------------------------------
+    // Async FIFO between PS clock and Aurora user clock
+    // ------------------------------------------------------------------------
+    wire         fifo_full;
+    wire         fifo_empty;
+    wire [255:0] fifo_dout;
+    wire         fifo_wr_en;
+    reg          fifo_rd_en = 1'b0;
+
+    // Write when software gives a rising edge and FIFO is not full
+    assign fifo_wr_en = ps_valid_rise & ~fifo_full;
 
     // ------------------------------------------------------------------------
-    // Async FIFO: PS clock domain -> Aurora user clock domain
+    // IMPORTANT:
+    // Status back to PS is generated ONLY from FIFO write-side visibility.
+    // This removes the remaining Aurora->PS inter-clock return path.
+    //
+    // bit0 = ready_for_new
+    // bit1 = busy
     // ------------------------------------------------------------------------
+    assign ps_gpio_tx_status_o[0] = ~fifo_full;
+    assign ps_gpio_tx_status_o[1] = ~fifo_empty;
+
     xpm_fifo_async #(
         .CDC_SYNC_STAGES      (2),
         .DOUT_RESET_VALUE     ("0"),
@@ -118,16 +119,21 @@ module ps_to_aurora_bridge
     );
 
     // ------------------------------------------------------------------------
-    // Read-side drive into Aurora mailbox inputs (Aurora clock domain)
+    // Aurora user clock domain:
+    //   - when FIFO has data and Aurora mailbox is idle, load one record
+    //   - assert aurora_ps_valid_o
+    //   - once Aurora mailbox reports busy, drop valid
+    //
+    // NOTE:
+    // aurora_ps_ready_i is not needed here for the bridge logic itself.
+    // Aurora-side mailbox logic handles the actual TX handshake.
     // ------------------------------------------------------------------------
     reg driving_req_r = 1'b0;
 
     always @(posedge aurora_user_clk_i) begin
-        fifo_rd_en         <= 1'b0;
+        fifo_rd_en <= 1'b0;
 
-        // Default: keep previous data unless loading a new record
         if (!driving_req_r) begin
-            // Only start a new Aurora request when Aurora mailbox is idle and FIFO has data
             if (!fifo_empty && !aurora_ps_busy_i) begin
                 aurora_ps_data_o[  0: 31] <= fifo_dout[ 31:  0];
                 aurora_ps_data_o[ 32: 63] <= fifo_dout[ 63: 32];
@@ -143,7 +149,6 @@ module ps_to_aurora_bridge
             end
         end
         else begin
-            // Hold valid high until Aurora mailbox reports busy, meaning it captured the request
             if (aurora_ps_busy_i) begin
                 aurora_ps_valid_o <= 1'b0;
                 driving_req_r     <= 1'b0;

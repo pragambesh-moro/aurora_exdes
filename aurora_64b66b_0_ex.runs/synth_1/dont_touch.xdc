@@ -5,6 +5,8 @@
 
 # XDC: c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc
 
+# XDC: new/timing_async_fix.xdc
+
 # Block Designs: bd/design_1/design_1.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 

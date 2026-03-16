@@ -103,8 +103,8 @@ read_verilog -library xil_defaultlib {
   c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/aurora_64b66b_0_ultrascale_tx_userclk.v
   c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
   c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/shared_logic/gtwizard_ultrascale_v1_7_gtye4_common.v
-  C:/Users/praga/Downloads/ps_to_aurora_bridge.v
-  C:/Users/praga/Downloads/top_ps_aurora_wrapper_cdc.v
+  C:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/ps_to_aurora_bridge.v
+  C:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/top_ps_aurora_wrapper_cdc.v
 }
 add_files c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
@@ -177,6 +177,9 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 read_xdc c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc
 set_property used_in_implementation false [get_files c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc]
+
+read_xdc c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc
+set_property used_in_implementation false [get_files c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc]
 
 read_xdc c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc
 set_property used_in_implementation false [get_files c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc]

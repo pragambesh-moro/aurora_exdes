@@ -1,0 +1,946 @@
+
+*** Running vivado
+    with args -log top_ps_aurora_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_ps_aurora_wrapper.tcl -notrace
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_ps_aurora_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: link_design -top top_ps_aurora_wrapper -part xczu48dr-ffvg1517-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'u_aurora_64b66b_0_exdes/u_ila'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.dcp' for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_ctrl'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data5'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data6'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data7'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.dcp' for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_status'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_96M_1/design_1_rst_ps8_0_96M_1.dcp' for cell 'u_design_1_wrapper/design_1_i/rst_ps8_0_96M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.dcp' for cell 'u_design_1_wrapper/design_1_i/zynq_ultra_ps_e_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.dcp' for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.317 . Memory (MB): peak = 2320.629 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 571 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: u_aurora_64b66b_0_exdes/u_ila UUID: 4f0d048b-5e46-5975-9e92-9472fd3a0d20 
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data0/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data0/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data0/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data0/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_status/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_status/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_status/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_status/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data1/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data1/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data1/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data1/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_ctrl/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_ctrl/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_ctrl/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_3/design_1_axi_gpio_0_3.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_ctrl/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data7/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data7/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data7/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_4/design_1_axi_gpio_0_4.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data7/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data6/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data6/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data6/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data6/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data5/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data5/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data5/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data5/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data4/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data4/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data4/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_7/design_1_axi_gpio_0_7.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data4/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data3/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data3/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data3/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_8/design_1_axi_gpio_0_8.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data3/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data2/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9_board.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data2/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data2/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_9/design_1_axi_gpio_0_9.xdc] for cell 'u_design_1_wrapper/design_1_i/axi_gpio_tx_data2/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_96M_1/design_1_rst_ps8_0_96M_1_board.xdc] for cell 'u_design_1_wrapper/design_1_i/rst_ps8_0_96M/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_96M_1/design_1_rst_ps8_0_96M_1_board.xdc] for cell 'u_design_1_wrapper/design_1_i/rst_ps8_0_96M/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_96M_1/design_1_rst_ps8_0_96M_1.xdc] for cell 'u_design_1_wrapper/design_1_i/rst_ps8_0_96M/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_96M_1/design_1_rst_ps8_0_96M_1.xdc] for cell 'u_design_1_wrapper/design_1_i/rst_ps8_0_96M/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'u_design_1_wrapper/design_1_i/zynq_ultra_ps_e_0/inst'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'u_design_1_wrapper/design_1_i/zynq_ultra_ps_e_0/inst'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/slave_fifo.data_fifo/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/slave_fifo.data_fifo/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane1_i/slave_fifo.data_fifo/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane1_i/slave_fifo.data_fifo/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane3_i/slave_fifo.data_fifo/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane3_i/slave_fifo.data_fifo/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane2_i/master_fifo.data_fifo/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane2_i/master_fifo.data_fifo/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_aurora_64b66b_0_exdes/u_ila/inst'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_aurora_64b66b_0_exdes/u_ila/inst'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'u_aurora_64b66b_0_exdes/u_ila/inst'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'u_aurora_64b66b_0_exdes/u_ila/inst'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:10]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:11]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:12]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:38]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:38]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST Instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST can not be placed in GTYE4_CHANNEL of site GTYE4_CHANNEL_X0Y6 because the bel is occupied by u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST. This could be caused by bel constraint conflict [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:56]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST Instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST can not be placed in GTYE4_CHANNEL of site GTYE4_CHANNEL_X0Y6 because the bel is occupied by u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST. This could be caused by bel constraint conflict [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:57]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST Instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST can not be placed in GTYE4_CHANNEL of site GTYE4_CHANNEL_X0Y5 because the bel is occupied by u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST. This could be caused by bel constraint conflict [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:59]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST Instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST can not be placed in GTYE4_CHANNEL of site GTYE4_CHANNEL_X0Y5 because the bel is occupied by u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST. This could be caused by bel constraint conflict [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:60]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST Instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST can not be placed in GTYE4_CHANNEL of site GTYE4_CHANNEL_X0Y7 because the bel is occupied by u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST. This could be caused by bel constraint conflict [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:66]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST Instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST can not be placed in GTYE4_CHANNEL of site GTYE4_CHANNEL_X0Y7 because the bel is occupied by u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST. This could be caused by bel constraint conflict [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:67]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST Instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST can not be placed in GTYE4_CHANNEL of site GTYE4_CHANNEL_X0Y4 because the bel is occupied by u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST. This could be caused by bel constraint conflict [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:75]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST Instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST can not be placed in GTYE4_CHANNEL of site GTYE4_CHANNEL_X0Y4 because the bel is occupied by u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST. This could be caused by bel constraint conflict [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc:76]
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.xdc]
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc:36]
+CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc:39]
+CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc:42]
+CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc:45]
+CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc:48]
+CRITICAL WARNING: [Designutils 20-1307] Command 'foreach' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc:56]
+CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc:71]
+CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc:78]
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/constrs_1/new/timing_async_fix.xdc]
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/slave_fifo.data_fifo/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/slave_fifo.data_fifo/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane1_i/slave_fifo.data_fifo/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane1_i/slave_fifo.data_fifo/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane3_i/slave_fifo.data_fifo/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_2/aurora_64b66b_0_fifo_gen_slave_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane3_i/slave_fifo.data_fifo/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane2_i/master_fifo.data_fifo/U0'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/cbcc_gtx0_lane2_i/master_fifo.data_fifo/U0'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst'
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc] for cell 'u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst'
+Parsing XDC File [c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'INIT_CLK_P' of a differential pair cannot be placed on a negative package pin 'G12' (IOBS). [c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc:1]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the negative port (N-side) 'INIT_CLK_N' of a differential pair cannot be placed on a positive package pin 'G13' (IOBM). [c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc:2]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'INIT_CLK_P' of a differential pair cannot be placed on a negative package pin 'G12' (IOBS). [c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc:3]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the negative port (N-side) 'INIT_CLK_N' of a differential pair cannot be placed on a positive package pin 'G13' (IOBM). [c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc:4]
+Finished Parsing XDC File [c:/Research/aurora_64b66b_0_ex/fixed_initclk_force.xdc]
+INFO: [Project 1-1714] 10 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst/gen_gtwizard_gtye4_top.aurora_64b66b_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[1].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_1 for BUFG_GT u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/clock_module_i/ultrascale_tx_userclk_1/gen_gtwiz_userclk_tx_main.bufg_gt_usrclk_inst
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2913.277 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 367 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 340 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 23 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+32 Infos, 0 Warnings, 23 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2913.277 ; gain = 1811.191
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-86] Your Implementation license expires in 2 day(s)
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2913.277 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = d81f56f1583ccf6e.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 3212.516 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 27c0be464
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 3212.516 ; gain = 43.855
+
+Phase 2 Retarget
+INFO: [Opt 31-1287] Pulled Inverter u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/GEN_SEP[2]_i_2 into driver instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/gen_sep_r[1]_i_5, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/gen_sep7_r[0]_i_2 into driver instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/gen_sep_nb_r[0]_i_3, which resulted in an inversion of 7 pins
+INFO: [Opt 31-1287] Pulled Inverter u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/gen_sep_nb_r[3]_i_2 into driver instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/gen_sep_nb_r[3]_i_3, which resulted in an inversion of 1 pins
+INFO: [Opt 31-1287] Pulled Inverter u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/gen_sep_nb_r[9]_i_2 into driver instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/gen_sep_nb_r[9]_i_3, which resulted in an inversion of 1 pins
+INFO: [Opt 31-1287] Pulled Inverter u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/gen_sep_r[2]_i_3 into driver instance u_aurora_64b66b_0_exdes/aurora_64b66b_0_block_i/aurora_64b66b_0_i/inst/tx_ll_i/tx_ll_control_sm_i/gen_sep_nb_r[6]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/xsdb_memory_read_inst/current_state[0]_i_1 into driver instance u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/xsdb_memory_read_inst/read_addr[9]_i_3, which resulted in an inversion of 12 pins
+INFO: [Opt 31-1287] Pulled Inverter u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/current_word_1[3]_i_1 into driver instance u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/s_axi_rvalid_INST_0_i_3, which resulted in an inversion of 2 pins
+INFO: [Opt 31-1287] Pulled Inverter u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.USE_SPLIT.write_resp_inst/first_mi_word_i_2 into driver instance u_design_1_wrapper/design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.USE_SPLIT.write_resp_inst/s_axi_bvalid_INST_0_i_1, which resulted in an inversion of 5 pins
+INFO: [Opt 31-1287] Pulled Inverter u_ps_to_aurora_bridge/u_ps_to_aurora_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 into driver instance u_ps_to_aurora_bridge/u_ps_to_aurora_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst//i_, which resulted in an inversion of 2 pins
+INFO: [Opt 31-138] Pushed 40 inverter(s) to 1415 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_aurora_64b66b_0_exdes/u_ila/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 148436092
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:28 . Memory (MB): peak = 3212.516 ; gain = 43.855
+INFO: [Opt 31-389] Phase Retarget created 102 cells and removed 6473 cells
+INFO: [Opt 31-1021] In phase Retarget, 95 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 3 Constant propagation | Checksum: 1683a11c5
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:28 . Memory (MB): peak = 3212.516 ; gain = 43.855
+INFO: [Opt 31-389] Phase Constant propagation created 86 cells and removed 226 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 81 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: 1cd5d2a30
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:28 . Memory (MB): peak = 3212.516 ; gain = 43.855
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 560 cells
+INFO: [Opt 31-1021] In phase Sweep, 1497 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 5 BUFG optimization | Checksum: 1cd5d2a30
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 3212.516 ; gain = 43.855
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 6 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 6 Shift Register Optimization | Checksum: 1cd5d2a30
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 3212.516 ; gain = 43.855
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+INFO: [Opt 31-1555] control_set_opt supports Versal devices only, and device xczu48dr is unsupported
+
+Phase 7 Post Processing Netlist
+Phase 7 Post Processing Netlist | Checksum: 10743ce40
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 3212.516 ; gain = 43.855
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 92 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             102  |            6473  |                                             95  |
+|  Constant propagation         |              86  |             226  |                                             81  |
+|  Sweep                        |               0  |             560  |                                           1497  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             92  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 3212.516 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 238293194
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:31 . Memory (MB): peak = 3212.516 ; gain = 43.855
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3212.516 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 238293194
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 3212.516 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+86 Infos, 0 Warnings, 23 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:35 . Memory (MB): peak = 3212.516 ; gain = 299.238
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.134 . Memory (MB): peak = 3243.621 ; gain = 31.012
+INFO: [Common 17-1381] The checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/impl_1/top_ps_aurora_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_ps_aurora_wrapper_drc_opted.rpt -pb top_ps_aurora_wrapper_drc_opted.pb -rpx top_ps_aurora_wrapper_drc_opted.rpx
+Command: report_drc -file top_ps_aurora_wrapper_drc_opted.rpt -pb top_ps_aurora_wrapper_drc_opted.pb -rpx top_ps_aurora_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/impl_1/top_ps_aurora_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3306.934 ; gain = 63.312
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-86] Your Implementation license expires in 2 day(s)
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 3314.105 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 175f056cb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 3314.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3314.105 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: eab7a235
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 12613969b
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 12613969b
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+Phase 1 Placer Initialization | Checksum: 12613969b
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 107bdbb90
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:35 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 11eadee53
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:37 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 11eadee53
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:38 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 13fd03a1c
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:38 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 13fd03a1c
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:39 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+Phase 2.1.1 Partition Driven Placement | Checksum: 13fd03a1c
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:39 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+Phase 2.1 Floorplanning | Checksum: 12a857548
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:39 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 12a857548
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:39 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 12a857548
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:39 . Memory (MB): peak = 4850.449 ; gain = 1536.344
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1e25c951b
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:57 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 363 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 162 nets or LUTs. Breaked 0 LUT, combined 162 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1030] Pass 1. Identified 1 candidate driver set for equivalent driver rewiring.
+INFO: [Physopt 32-661] Optimized 1 net.  Re-placed 12 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 0 new cell, deleted 0 existing cell and moved 12 existing cells
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 5003.852 ; gain = 0.000
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 5003.852 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            162  |                   162  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                     1  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            162  |                   163  |           0  |           5  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 281b02287
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:59 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Phase 2.4 Global Placement Core | Checksum: 1a57792ea
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:02 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Phase 2 Global Placement | Checksum: 1a57792ea
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:02 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 216cbcfbd
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:01:03 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 11a8719d7
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:04 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 17298df58
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:07 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 3.3.2 Flow Legalize Slice Clusters
+Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 16df11ce1
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:01:08 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 3.3.3 Slice Area Swap
+
+Phase 3.3.3.1 Slice Area Swap Initial
+Phase 3.3.3.1 Slice Area Swap Initial | Checksum: c456cc53
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:10 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Phase 3.3.3 Slice Area Swap | Checksum: c456cc53
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:10 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Phase 3.3 Small Shape DP | Checksum: 1f7cbd2c0
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:13 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 1b64d9e60
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:14 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 192d5e885
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:01:15 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Phase 3 Detail Placement | Checksum: 192d5e885
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:01:16 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 237cdc1c8
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=3.012 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1929d55d3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.392 . Memory (MB): peak = 5003.852 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 2050d3813
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.516 . Memory (MB): peak = 5003.852 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 237cdc1c8
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:01:21 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=3.012. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1dbee486d
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:01:21 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:01:21 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Phase 4.1 Post Commit Optimization | Checksum: 1dbee486d
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:01:21 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 5003.852 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1fdaea419
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:30 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                4x4|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1fdaea419
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:30 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Phase 4.3 Placer Reporting | Checksum: 1fdaea419
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:30 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 5003.852 ; gain = 0.000
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:31 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 11333f982
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:31 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+Ending Placer Task | Checksum: 107b9178c
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:31 . Memory (MB): peak = 5003.852 ; gain = 1689.746
+INFO: [Common 17-83] Releasing license: Implementation
+127 Infos, 0 Warnings, 23 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:50 ; elapsed = 00:01:33 . Memory (MB): peak = 5003.852 ; gain = 1696.918
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 5003.852 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/impl_1/top_ps_aurora_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 5003.852 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file top_ps_aurora_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 5003.852 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file top_ps_aurora_wrapper_utilization_placed.rpt -pb top_ps_aurora_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_ps_aurora_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 5003.852 ; gain = 0.000
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-86] Your Implementation license expires in 2 day(s)
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 5003.852 ; gain = 0.000
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+138 Infos, 0 Warnings, 23 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 5003.852 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/impl_1/top_ps_aurora_wrapper_physopt.dcp' has been generated.
+Command: route_design -directive Explore -tns_cleanup
+Attempting to get a license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-86] Your Implementation license expires in 2 day(s)
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: d9ca3d91 ConstDB: 0 ShapeSum: c2e7e4f RouteDB: 21c05bac
+Nodegraph reading from file.  Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 5003.852 ; gain = 0.000
+Post Restoration Checksum: NetGraph: c72c13a6 NumContArr: 88a33a00 Constraints: 215c4369 Timing: 0
+Phase 1 Build RT Design | Checksum: 1712b910f
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 5003.852 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 1712b910f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 5003.852 ; gain = 0.000
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 1712b910f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 5003.852 ; gain = 0.000
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 1244b0580
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 230eb7528
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 5005.664 ; gain = 1.812
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.179  | TNS=0.000  | WHS=-0.198 | THS=-32.569|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 27befd07c
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 5005.664 ; gain = 1.812
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.179  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 2b7c5ab32
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00308244 %
+  Global Horizontal Routing Utilization  = 0.000449165 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 21109
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 19130
+  Number of Partially Routed Nets     = 1979
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 1cd320faf
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 1cd320faf
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 5005.664 ; gain = 1.812
+Phase 3 Initial Routing | Checksum: 22cc3d1b9
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:25 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 3299
+ Number of Nodes with overlaps = 357
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.779  | TNS=0.000  | WHS=-0.020 | THS=-0.031 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 23934b578
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:40 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 4.2 Additional Iteration for Hold
+Phase 4.2 Additional Iteration for Hold | Checksum: 187eba78e
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:41 . Memory (MB): peak = 5005.664 ; gain = 1.812
+Phase 4 Rip-up And Reroute | Checksum: 187eba78e
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:41 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 TNS Cleanup
+
+Phase 5.1.1 Delay CleanUp
+
+Phase 5.1.1.1 Update Timing
+Phase 5.1.1.1 Update Timing | Checksum: 1c68b7e55
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:43 . Memory (MB): peak = 5005.664 ; gain = 1.812
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.779  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+
+Phase 5.1.1.2 Update Timing
+Phase 5.1.1.2 Update Timing | Checksum: 23d4c8ed3
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 5005.664 ; gain = 1.812
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.779  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 5.1.1 Delay CleanUp | Checksum: 1b89bafdb
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 5005.664 ; gain = 1.812
+Phase 5.1 TNS Cleanup | Checksum: 1b89bafdb
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1b89bafdb
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 5005.664 ; gain = 1.812
+Phase 5 Delay and Skew Optimization | Checksum: 1b89bafdb
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 23266705f
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:45 . Memory (MB): peak = 5005.664 ; gain = 1.812
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.779  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 22906ede1
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:46 . Memory (MB): peak = 5005.664 ; gain = 1.812
+Phase 6 Post Hold Fix | Checksum: 22906ede1
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:46 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.597144 %
+  Global Horizontal Routing Utilization  = 0.697487 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1a9b0156e
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:46 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1a9b0156e
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:46 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1a9b0156e
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:47 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 10 Resolve XTalk
+Phase 10 Resolve XTalk | Checksum: 1a9b0156e
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:47 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 11 Route finalize
+Phase 11 Route finalize | Checksum: 1a9b0156e
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:48 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Phase 12 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=2.779  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 12 Post Router Timing | Checksum: 2312fa04e
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:52 . Memory (MB): peak = 5005.664 ; gain = 1.812
+INFO: [Route 35-61] The design met the timing requirement.
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:52 . Memory (MB): peak = 5005.664 ; gain = 1.812
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+157 Infos, 0 Warnings, 23 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:18 ; elapsed = 00:00:55 . Memory (MB): peak = 5005.664 ; gain = 1.812
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 5005.664 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/impl_1/top_ps_aurora_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_ps_aurora_wrapper_drc_routed.rpt -pb top_ps_aurora_wrapper_drc_routed.pb -rpx top_ps_aurora_wrapper_drc_routed.rpx
+Command: report_drc -file top_ps_aurora_wrapper_drc_routed.rpt -pb top_ps_aurora_wrapper_drc_routed.pb -rpx top_ps_aurora_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/impl_1/top_ps_aurora_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file top_ps_aurora_wrapper_methodology_drc_routed.rpt -pb top_ps_aurora_wrapper_methodology_drc_routed.pb -rpx top_ps_aurora_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file top_ps_aurora_wrapper_methodology_drc_routed.rpt -pb top_ps_aurora_wrapper_methodology_drc_routed.pb -rpx top_ps_aurora_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/impl_1/top_ps_aurora_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 5005.664 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file top_ps_aurora_wrapper_power_routed.rpt -pb top_ps_aurora_wrapper_power_summary_routed.pb -rpx top_ps_aurora_wrapper_power_routed.rpx
+Command: report_power -file top_ps_aurora_wrapper_power_routed.rpt -pb top_ps_aurora_wrapper_power_summary_routed.pb -rpx top_ps_aurora_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+169 Infos, 1 Warnings, 23 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 5005.664 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file top_ps_aurora_wrapper_route_status.rpt -pb top_ps_aurora_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_ps_aurora_wrapper_timing_summary_routed.rpt -pb top_ps_aurora_wrapper_timing_summary_routed.pb -rpx top_ps_aurora_wrapper_timing_summary_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_ps_aurora_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_ps_aurora_wrapper_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 5005.664 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_ps_aurora_wrapper_bus_skew_routed.rpt -pb top_ps_aurora_wrapper_bus_skew_routed.pb -rpx top_ps_aurora_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 03:09:19 2026...
+
+*** Running vivado
+    with args -log top_ps_aurora_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_ps_aurora_wrapper.tcl -notrace
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_ps_aurora_wrapper.tcl -notrace
+Command: open_checkpoint top_ps_aurora_wrapper_routed.dcp
+INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.295 . Memory (MB): peak = 2190.441 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 584 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2845.645 ; gain = 53.074
+Restored from archive | CPU: 3.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2845.645 ; gain = 53.074
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 3119.895 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 381 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 340 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 25 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  SRLC32E => SRL16E: 8 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2 (64-bit) build 3671981
+OpenCheckpoint Checksum | Checksum: 8142b882
+----- Checksum: PlaceDB: 5a4f1dcc ShapeSum: 0c2e7e4f RouteDB: 1ac51c67 
+open_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3119.895 ; gain = 2233.688
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu48dr'
+INFO: [Common 17-86] Your Implementation license expires in 2 day(s)
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode ( 100.0% nets are fully routed)
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3226.355 ; gain = 106.461
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+18 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3226.355 ; gain = 106.461
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3292.910 ; gain = 65.883
+INFO: [Common 17-1381] The checkpoint 'c:/Research/aurora_64b66b_0_ex/aurora_64b66b_0_ex.runs/impl_1/top_ps_aurora_wrapper_postroute_physopt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -warn_on_violation -file top_ps_aurora_wrapper_timing_summary_postroute_physopted.rpt -pb top_ps_aurora_wrapper_timing_summary_postroute_physopted.pb -rpx top_ps_aurora_wrapper_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_ps_aurora_wrapper_bus_skew_postroute_physopted.rpt -pb top_ps_aurora_wrapper_bus_skew_postroute_physopted.pb -rpx top_ps_aurora_wrapper_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 03:12:21 2026...
